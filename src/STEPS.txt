@@ -1,0 +1,308 @@
+🟦 NEXT MESSAGE
+
+Full Tailwind Frontend
+Products page
+Cart page (+ / -)
+Grand total calculation
+Razorpay popup
+Address form
+Order confirmation
+Beautiful UI
+
+🔥 LET’S BUILD THE WEEK 5 E-COMMERCE FRONTEND 🔥
+React (Vite) + Tailwind + JWT + Cart + Razorpay
+
+This will be clean, responsive, and production-style.
+
+🟦 FRONTEND STRUCTURE
+
+src-week5-fullstackproj/
+│
+├── api.js
+├── App.jsx
+├── main.jsx
+│
+├── context/
+│     └── CartContext.jsx
+│
+├── components/
+│     ├── Navbar.jsx
+│     └── ProductCard.jsx
+│
+└── pages/
+      ├── Login.jsx
+      ├── Register.jsx
+      ├── Products.jsx
+      ├── Cart.jsx
+      ├── Checkout.jsx
+      └── Orders.jsx
+
+
+Add Razorpay script inside index.html:
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+===================================================================================================
+Perfect Naressh 🔥
+
+Here is your **correct frontend `.env` file** for Vite + Razorpay + Backend.
+
+---
+
+# 🟦 Frontend `.env`
+
+Create this file in your **frontend root folder**
+(same level as `package.json`)
+
+```
+week5_frontend/
+│
+├── .env
+├── package.json
+├── vite.config.js
+└── src/
+```
+
+---
+
+## 🟢 .env (Development - Local)
+
+```env
+VITE_API_URL=http://localhost:5000/api
+VITE_RAZORPAY_KEY_ID=rzp_test_7loOYJatPLp2HD
+```
+
+---
+
+# ⚠️ Important Rules for Vite
+
+1. All variables MUST start with:
+
+```
+VITE_
+```
+
+Otherwise they won’t work.
+
+2. After creating `.env`, restart dev server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 🟦 For Production (After Deploy Backend to Render)
+
+If your backend is deployed at:
+
+```
+https://week5-backend.onrender.com
+```
+
+Then update `.env`:
+
+```env
+VITE_API_URL=https://week5-backend.onrender.com/api
+VITE_RAZORPAY_KEY_ID=rzp_test_7loOYJatPLp2HD
+```
+
+---
+
+# 🟦 How You Use It in Code
+
+In `api.js`:
+
+```js
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
+```
+
+In `Checkout.jsx`:
+
+```js
+key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+```
+
+---
+
+# 🚨 Very Important Security Rule
+
+Frontend `.env`:
+
+✔ Razorpay **KEY_ID** is safe
+❌ NEVER put `RAZORPAY_KEY_SECRET` in frontend
+
+Secret stays ONLY in backend `.env`.
+
+---
+
+# 🧠 If It Still Doesn’t Work
+
+Check in browser console:
+
+```js
+console.log(import.meta.env);
+```
+
+You should see:
+
+```js
+{
+  VITE_API_URL: "...",
+  VITE_RAZORPAY_KEY_ID: "..."
+}
+```
+
+---
+
+# 🚀 Now Your Environment Is Correct
+
+You now have:
+
+✔ Backend secure keys
+✔ Frontend public key
+✔ Proper Vite config
+✔ Production-ready environment setup
+
+---
+
+If you want next:
+
+* Setup Render deployment for frontend
+* Setup CORS properly
+* Setup production build optimization
+* Add signature verification for Razorpay
+* Add payment failure handling
+
+Tell me next level Naressh 😎🔥
+===================================================================================================
+✅ STEP 2 — Verify .env Location
+
+Make sure .env is in:
+
+week5_frontend/.env
+
+
+NOT inside src/.
+
+Correct structure:
+
+week5_frontend/
+│
+├── .env
+├── package.json
+├── vite.config.js
+└── src/
+===================================================================================================
+INSERT INTO products_week5_fullstackproj 
+(name, description, price, image, stock)
+VALUES
+
+('Wireless Mouse',
+ 'Ergonomic wireless mouse with adjustable DPI and long battery life.',
+ 699.00,
+ 'https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg',
+ 50),
+
+('Mechanical Keyboard',
+ 'RGB mechanical keyboard with blue switches for tactile feedback.',
+ 2499.00,
+ 'https://media.istockphoto.com/id/1127735227/photo/backlit-keyboard-with-rainbow-colors-orange-pink-blue-green.jpg?s=612x612&w=0&k=20&c=-Q1KIJzV5aTcm_lG1tPr1UJqK0WvD6fQjMoRLDv1_QA=',
+ 40),
+
+('Gaming Headset',
+ 'Surround sound gaming headset with noise cancellation mic.',
+ 1799.00,
+ 'https://m.media-amazon.com/images/I/61LhfQRdEgL.jpg',
+ 35),
+
+('USB-C Charger 65W',
+ 'Fast charging USB-C adapter compatible with laptops and phones.',
+ 1299.00,
+ 'https://m.media-amazon.com/images/I/51ygA3B0ahL._AC_UF1000,1000_QL80_.jpg',
+ 60),
+
+('Laptop Stand',
+ 'Aluminum adjustable laptop stand for better posture.',
+ 999.00,
+ 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR-CS0upEiXFlQwBwkkcVJ21bCb5IUwekbh3iQA-GCSUrXQLLjo3dqtd3a66W1BEiuzcyoGTL_UzSczOSsWOqRLHM_PXfNG1pr9wp0WtPc5Bb6xp2rDlnVP',
+ 45),
+
+('Bluetooth Speaker',
+ 'Portable Bluetooth speaker with deep bass and 10-hour battery.',
+ 1599.00,
+ 'https://media.istockphoto.com/id/626428378/photo/wireless-portable-speaker.jpg?s=612x612&w=0&k=20&c=zfEmfKGQRKSatPzKyT7mqZzBJQfl_965qerjQnH0LVs=',
+ 30),
+
+('External Hard Drive 1TB',
+ 'High-speed USB 3.0 external hard drive for backups.',
+ 3499.00,
+ 'https://m.media-amazon.com/images/I/51Oq11D2l1L.jpg',
+ 25),
+
+('Webcam 1080p',
+ 'Full HD webcam with built-in microphone for video calls.',
+ 1199.00,
+ 'https://play-lh.googleusercontent.com/QxpQbQUOn2XuaGDhwqyPP7XLWDxAWlNBX5uYZkRPTX6HC-oUR2jpkJ57Ia4lZzy_TUu2',
+ 55),
+
+('Smart Watch',
+ 'Fitness tracking smartwatch with heart rate monitor.',
+ 3999.00,
+ 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqR6DFcVKopeWorypqXGOMFCpEL5J4n9Nmuw&s',
+ 20),
+
+('Power Bank 20000mAh',
+ 'High capacity power bank with fast charging support.',
+ 1499.00,
+ 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQrFcI9xOTu7-ZqHAhP8zAKfPzCTr-JlW9CRzQA23Dqw-lR88Uc8k3_i2ORLS3mVyT7yFEMLVDwakMYagGmJgYl0cwtxBLlXqTpVPhTlulFsC7-JFyQOa7xQ',
+ 70);
+
+===================================================================================================
+LOGHT AND DARK MODE:
+====================
+✅ SOLUTION FOR TAILWIND v4
+
+We must configure dark mode inside CSS.
+
+🟢 STEP 1 — Update index.css
+
+Open your src/index.css and replace everything with:
+
+@import "tailwindcss";
+
+/* Enable dark mode via class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+This tells Tailwind:
+
+When .dark class is on <html>, apply dark styles.
+
+🟢 STEP 2 — Add Global Background
+
+Still inside index.css, add:
+
+html, body {
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300;
+}
+
+🟢 STEP 3 — Restart Dev Server
+Ctrl + C
+npm run dev
+
+
+Tailwind must rebuild.
+
+🟢 STEP 4 — Confirm Toggle Works
+
+Your Navbar toggle:
+
+document.documentElement.classList.toggle("dark");
+
+
+Now it WILL work.
+===================================================================================================
+Plot:186;Sector:12;MVP Colony;Visakhapatnam:530017
+===================================================================================================

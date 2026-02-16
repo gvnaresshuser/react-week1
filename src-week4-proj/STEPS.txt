@@ -1,0 +1,9 @@
+📁 Frontend Structure
+src-week4-proj/
+ ├── api.js
+ ├── App.jsx
+ ├── main.jsx
+ └── pages/
+       ├── Login.jsx
+       ├── Register.jsx
+       └── Dashboard.jsx

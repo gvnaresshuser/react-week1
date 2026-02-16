@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Enable dark mode via class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body {
+    @apply bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300;
+}

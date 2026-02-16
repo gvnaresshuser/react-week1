@@ -1,0 +1,55 @@
+===============================================================================================
+WEEK-3
+===============================================================================================
+| Week 3 | Backend with Node.js & Express                |
+
+
+Microsoft Windows [Version 10.0.26100.6899]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\backend>npm run dev
+
+> backend@1.0.0 dev
+> nodemon server.js
+
+[nodemon] 3.1.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node server.js`
+[dotenv@17.3.1] injecting env (1) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Server running on port 5000
+venkatdada369@gmail.com 123123
+tewt venkatdada369@gmail.com 123123
+hashedPassword $2b$10$.SfIGZPLOHczfhWLp/FVFuq06yokgx5DhwXTyjfp6kWwlRvg5D2i6
+user {
+  id: '1770988349397',
+  name: 'tewt',
+  email: 'venkatdada369@gmail.com',
+  password: '$2b$10$.SfIGZPLOHczfhWLp/FVFuq06yokgx5DhwXTyjfp6kWwlRvg5D2i6'
+}
+venkatdada369@gmail.com 123123
+===============================================================================================
+Microsoft Windows [Version 10.0.26100.6899]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\backend-products>npm init -y
+Wrote to E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\backend-products\package.json:
+
+{
+  "name": "backend-products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\backend-products>
