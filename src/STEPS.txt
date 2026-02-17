@@ -358,3 +358,32 @@ Vercel will:
 ✔ Automatically build
 ✔ Deploy live
 ✔ Update production
+
+================================================================
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\react-week1>git branch
+* main
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\react-week1>git add .
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\react-week1>git commit -m "Updated all files with UI improvement"
+[main e79062a] Updated all files with UI improvement
+ 13 files changed, 549 insertions(+), 133 deletions(-)
+ create mode 100644 public/fallback.jpeg
+ create mode 100644 public/fallback.png
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\react-week1>git push
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 83.67 KiB | 9.30 MiB/s, done.
+Total 20 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 11 local objects.
+To https://github.com/gvnaresshuser/react-week1.git
+   aff8b3f..e79062a  main -> main
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\REACTJS-TRAINING-6-WEEKS\react-week1>
