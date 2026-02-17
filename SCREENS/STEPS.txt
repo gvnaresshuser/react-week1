@@ -7,6 +7,8 @@
 | Week 5 | Full-Stack Project + Tailwind                 |
 | Week 6 | Advanced Topics + Deployment + Interview Prep |
 
+Plot No:186;Sector:12;MVP Colony;Visakhapatnam;Pin:530017
+
 =====================================================================================================
 Week 1 | JavaScript + React Fundamentals 
 =====================================================================================================

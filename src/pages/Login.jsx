@@ -1,5 +1,6 @@
 import { useState } from "react";
 import API from "../api";
+import Swal from "sweetalert2";
 
 export default function Login({ setIsAuth, setPage }) {
     const [form, setForm] = useState({
@@ -9,7 +10,7 @@ export default function Login({ setIsAuth, setPage }) {
 
     const [error, setError] = useState("");
 
-    const handleSubmit = async (e) => {
+ /*    const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
@@ -20,7 +21,62 @@ export default function Login({ setIsAuth, setPage }) {
         } catch (err) {
             setError(err.response?.data?.message || "Login failed");
         }
+    }; */
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(""); // clear old errors
+
+        try {
+            // Show loading alert
+            Swal.fire({
+                title: "Logging in...",
+                text: "Please wait",
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+            });
+
+            const res = await API.post("/auth/login", form);
+
+            Swal.close(); // close loading popup
+
+            localStorage.setItem("token", res.data.token);
+
+            // Success Alert
+            Swal.fire({
+                icon: "success",
+                title: "Login Successful 🎉",
+                text: "Welcome back!",
+                confirmButtonColor: "#4f46e5",
+                timer: 1500,
+                showConfirmButton: false,
+            });
+
+            setIsAuth(true);
+
+            setTimeout(() => {
+                setPage("products");
+            }, 1500);
+
+        } catch (err) {
+            Swal.close();
+
+            const message =
+                err.response?.data?.message || "Login failed";
+
+            // retain error in UI
+            setError(message);
+
+            // SweetAlert error popup
+            Swal.fire({
+                icon: "error",
+                title: "Login Failed",
+                text: message,
+            });
+        }
     };
+
 
     return (
         <div className="flex items-center justify-center h-screen bg-gradient-to-br from-indigo-500 to-purple-600">

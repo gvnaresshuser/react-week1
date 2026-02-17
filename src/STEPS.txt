@@ -306,3 +306,55 @@ Now it WILL work.
 ===================================================================================================
 Plot:186;Sector:12;MVP Colony;Visakhapatnam:530017
 ===================================================================================================
+
+SWEETALERT2:
+-----------
+npm install sweetalert2
+import Swal from "sweetalert2";
+
+   Swal.fire({
+            icon: "success",
+            title: "Registration Successful 🎉",
+            text: "Your account has been created successfully!",
+            confirmButtonColor: "#16a34a",
+        }).then(() => {
+            setPage("login");
+        });
+
+REACT-ICONS:
+-----------
+npm install react-icons
+import { MdOutlinePayments } from "react-icons/md";
+=====================================================================
+🧠 When Do You Need setPage?
+You only pass setPage to a component if that component needs to:
+Navigate to another page
+Change app state (like redirect after payment)
+Trigger logout
+
+Switch views
+| Page       | Needs `setPage`? | Why                       |
+| ---------- | ---------------- | ------------------------- |
+| `Products` | ❌ Not currently  | No navigation inside      |
+| `Cart`     | ✅ Yes            | Has `Proceed to Checkout` |
+| `Checkout` | ✅ Yes            | Redirects to `orders`     |
+| `Orders`   | ❌ No             | Just displays data        |
+| `Login`    | ✅ Yes            | Redirects after login     |
+| `Register` | ✅ Yes            | Switches to login         |
+=====================================================================
+
+🔥 From Now On
+
+Every time you update your project:
+
+git add .
+git commit -m "Updated all files with UI improvement"
+git push
+
+
+Vercel will:
+
+✔ Detect push
+✔ Automatically build
+✔ Deploy live
+✔ Update production

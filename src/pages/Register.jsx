@@ -1,5 +1,6 @@
 import { useState } from "react";
 import API from "../api";
+import Swal from "sweetalert2";
 
 export default function Register({ setPage }) {
     const [form, setForm] = useState({
@@ -14,8 +15,17 @@ export default function Register({ setPage }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (form.password !== form.confirmPassword) {
+        /* if (form.password !== form.confirmPassword) {
             return setError("Passwords do not match");
+        } */
+        if (form.password !== form.confirmPassword) {
+            setError("Passwords do not match");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Passwords do not match!",
+            });
+            return;
         }
 
         try {
@@ -25,10 +35,23 @@ export default function Register({ setPage }) {
                 password: form.password,
             });
 
-            alert("Registration successful!");
-            setPage("login");
+            /* alert("Registration successful!");
+            setPage("login"); */
+            Swal.fire({
+                icon: "success",
+                title: "Registration Successful 🎉",
+                text: "Your account has been created successfully!",
+                confirmButtonColor: "#16a34a",
+            }).then(() => {
+                setPage("login");
+            });
         } catch (err) {
             setError(err.response?.data?.message || "Registration failed");
+            Swal.fire({
+                icon: "error",
+                title: "Registration Failed",
+                text: err.response?.data?.message || "Something went wrong!",
+            });
         }
     };
 

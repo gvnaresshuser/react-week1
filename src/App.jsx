@@ -51,7 +51,8 @@ export default function App() {
 
       {page === "products" && <Products />}
       {page === "cart" && <Cart setPage={setPage} />}
-      {page === "checkout" && <Checkout />}
+      {/* {page === "checkout" && <Checkout />} */}
+      {page === "checkout" && <Checkout setPage={setPage} />}
       {page === "orders" && <Orders />}
     </CartProvider>
   );
